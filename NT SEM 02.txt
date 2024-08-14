@@ -1,1 +1,10 @@
 Ele falou das primary key
+Normalização (3 formas nominais): Passo a passo do caraio
+
+1: Eliminar dependência da chave -> Relacionar uma chave primaria com o que realmente somente tem haver com ela. Criar e formular uma tabela dessa maneira (ex: cpf tem haver com o nome, idade, sexo da pessoa. Mas não tem nada haver com endereço, email...)
+2: Criar as tabelas de acordo com as separações.
+3: Estruturar em tabelas associadas. 
+
+Ele falou da cardinalidade (1-1,1-N,N-N);
+
+Isso tem relação com a otimização do banco de dados -- Repetir menos vezes as informações;
