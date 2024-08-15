@@ -8,3 +8,44 @@ Normalização (3 formas nominais): Passo a passo do caraio
 Ele falou da cardinalidade (1-1,1-N,N-N);
 
 Isso tem relação com a otimização do banco de dados -- Repetir menos vezes as informações;
+
+Exercíciozinho q ele passou: 
+
+tbPedido 
+
+- IDPed int primary key; 
+- data varchar(8);
+- IDCli foreign key; 
+- IDProd foreign key;
+
+tbProdutos
+- IDProd primary key not null; 
+- Desc varchar(20) not null;
+- Tipo varchar(20) not null;
+- Valor decimal (2,8) not null;
+- Quant int not null;
+- Total decimal (2,8) not null;
+- IDForn foreign key;
+
+tbClientes 
+
+- IDCli int primary key auto_increment; 
+- Nome varchar(50) not null;
+- IDEnd foreign key; 
+- Telefone varchar(10) not null;
+
+tbEndereço
+
+- IDEnd int primary key;
+- Endereco varchar(40);
+
+tbFornecedor 
+
+- IDForn int primary key not null auto_increment;
+- Razao varchar(50) not null;
+- Tel varchar(10) not null;
+- IDEnd int foreign key;
+
+
+tbPedidos - tbProdutos  -> tbFornecedor -> tbEndereço
+	  - tbCliente   -> tbEndereço
